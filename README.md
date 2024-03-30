@@ -25,7 +25,9 @@ docker pull maxxing/compiler-dev
 docker run -it --rm maxxing/compiler-dev bash
 
 在docker环境中，使用以下命令进行生成KoopaIR【把sysY代码放入hello.c】
+
 make
+
 build/compiler -koopa 输入文件 -o 输出文件
 
 使用以下命令生成riscv
