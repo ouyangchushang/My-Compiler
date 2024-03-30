@@ -1,0 +1,10 @@
+docker run -it --rm -v D:/pku_study/sysycompiler2023:/root/compiler maxxing/compiler-dev
+
+cd compiler
+cmake -DCMAKE_BUILD_TYPE=Debug -B build
+cmake --build build
+build/compiler -koopa ./debug/hello.c -o ./debug/hello.koopa
+build/compiler -riscv ./debug/hello.c -o ./debug/hello.txt
+
+docker run -it --rm -v D:/pku_study/sysycompiler2023:/root/compiler maxxing/compiler-dev autotest -koopa -s lv1 /root/compiler
+docker run -it --rm -v D:/pku_study/sysycompiler2023:/root/compiler maxxing/compiler-dev autotest -riscv -s lv1 /root/compiler
