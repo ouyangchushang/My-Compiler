@@ -1,4 +1,4 @@
-# sysycompiler2023
+# syscompiler2023
 
 本项目实现了一个自制编译器，其识别一种名为sysY的语言（与c语言类似），首先转换为中间代码KoopaIR，并读入生成的KoopaIR代码并生成riscv汇编代码。
 
